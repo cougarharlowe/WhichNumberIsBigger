@@ -24,13 +24,21 @@ public class BiggerNumberGame {
             rightnumber = (int) (Math.random() * (upperLimit - lowerLimit)) + lowerLimit;
         }
     }
-     public String checkAnswer(int answer){
-    //determine if the answer is right
-    // based on the values of leftnumber and right number
-    // update the score accordingly
-    //return a relevant message
-         return "hit the woah";
+     public String checkAnswer(int answer) {
+         //determine if the answer is right
+         // based on the values of leftnumber and right number
+         // update the score accordingly
+         //return a relevant message
+         if (answer == Math.max(leftnumber, rightnumber)) {
+             score += 1;
+             return "hit the woah";
+
+         } else {
+             score -= 1;
+
+             return "Danny how you feel?";
          }
+     }
 
 
     public int getLeftnumber() {
